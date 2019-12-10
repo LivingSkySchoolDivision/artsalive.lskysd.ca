@@ -9,8 +9,8 @@ pipeline {
         stage('Git clone') {
             steps {
                 git branch: 'master',
-                    credentialsId: 'JENKINS-AZUREDEVOPS',
-                    url: 'git@ssh.dev.azure.com:v3/LivingSkySchoolDivision/ArchivedWebsite-ArtsAlive/ArchivedWebsite-ArtsAlive'
+                    credentialsId: 'DEPLOY-KEY-JENKINS',
+                    url: 'git@sourcecode.lskysd.ca:32123/PublicCode/ArchivedWebsite-ArtsAlive.git'
             }
         }
         stage('Docker build') {
