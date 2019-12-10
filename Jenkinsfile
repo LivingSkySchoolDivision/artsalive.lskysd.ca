@@ -10,7 +10,7 @@ pipeline {
             steps {
                 git branch: 'master',
                     credentialsId: 'DEPLOY-KEY-JENKINS',
-                    url: 'git@sourcecode.lskysd.ca:32123/PublicCode/ArchivedWebsite-ArtsAlive.git'
+                    url: 'ssh://git@sourcecode.lskysd.ca:32123/PublicCode/ArchivedWebsite-ArtsAlive.git'
             }
         }
         stage('Docker build') {
