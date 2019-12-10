@@ -3,7 +3,7 @@ pipeline {
     environment {
         REPO = "websitearchive/artsalive"
         PRIVATE_REPO = "${PRIVATE_DOCKER_REGISTRY}/${REPO}"
-        TAG = "j-${env.BUILD_NUMBER}"
+        TAG = "${BUILD_TIMESTAMP}"
     }
     stages {
         stage('Git clone') {
