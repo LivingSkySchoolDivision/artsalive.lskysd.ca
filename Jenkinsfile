@@ -9,7 +9,7 @@ pipeline {
         stage('Git clone') {
             steps {
                 git branch: 'master',
-                    url: 'https://sourcecode.lskysd.ca/PublicCode/ArchivedWebsite-ArtsAlive.git'
+                    url: 'https://github.com/LivingSkySchoolDivision/artsalive.lskysd.ca.git'
             }
         }
         stage('Docker build') {
